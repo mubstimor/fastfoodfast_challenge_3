@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Home | Fast Food Fast!</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+</head>
+<body>
+
+<div id="main_wrapper">
+
+    <div class="main-menu">
+        <div class="sidebar-nav">
+            <ul class="nav nav-tabs nav-menu">
+                <li><a class="nav-link" href="index.html"> Home</a></li>
+                <li><a class="nav-link active" href="order_history.html">Order History</a></li>
+                <li><a class="nav-link" href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="left_box">
+        <div class="box-header well">
+            <h2>Menu</h2>
+        </div>
+
+        <div class="center">
+                <div class="alert alert-info">
+                    Click on the <div class="circle plus"></div> icon to add an item to your order
+                </div>
+            </div>
+
+        <div class="form_content">
+            <form method="post" action="">
+
+                <div class="menu_item">
+                    <div class="item header">
+                        <h2>Foods</h2>
+                    </div>
+
+                    <div class="food_item">
+                        <div class="food_image">
+                            <img src="../img/chips_chicken.jpeg" alt="Chips chicken" />
+                        </div>
+                        <div class="food_description">
+
+                            <div class="food_item_label">
+                                    <h3><span>Chips + Chicken</span></h3>
+                                </div>
+                                <div class="price-right">
+                                    <span><a href="#" onclick="item_clicked('Chips + Chicken', 15000)">15000Ush
+                                    <div class="circle plus"></div>
+                                    </a></span>
+                                </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="food_item">
+                            <div class="food_image">
+                                    <img src="../img/rice_chapatti.jpg" alt="Rice + Chapatti" />
+                                </div>
+                        <div class="food_item_label">
+                            <h3><span>Rice + Chapatti</span></h3>
+                        </div>
+                        <div class="price-right">
+                            <span><a href="#" onclick="item_clicked('Rice + Chapatti', 6000)">6000Ush
+                            <div class="circle plus"></div>
+                                </a></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="menu_item">
+                    <div class="item header">
+                        <h2>Beverages</h2>
+                    </div>
+
+                    <div class="food_item">
+                        <div class="food_image">
+                                <img src="../img/hot-chocolate.jpg" alt="Chips chicken" />
+                            </div>
+                        <div class="food_item_label">
+                            <h3><span>Hot Chocolate </span></h3>
+                        </div>
+
+                        <div class="price-right">
+                            <span><a href="#" onclick="item_clicked('Hot Chocolate', 9000)">9000Ush
+                            <div class="circle plus"></div>
+                            </a></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--<div class="submit-control">-->
+                <!--<p><input type="submit" value="Submit Order"></p>-->
+                <!--</div>-->
+            </form>
+
+        </div>
+    </div>
+
+    <div class="checkout_box">
+           
+         <h2>Your Order</h2>
+
+         <div class="order_item" id="added_item">
+            
+                <div class="food_item_label">
+                    <span>Chips + Chicken </span>
+                </div>
+                <div class="quantity-field">
+                    Qty: <input type='number' size='10' id='numberinput' name='mynumber' min="1" value='1' />
+                </div>
+                <div class="new_total">
+                    <span>15000</span>
+                </div>
+
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="form-btn center">
+                    <div class="btn-submit">
+                        <input type="button" class="center button button_round_corner button_green" value="Update Order">
+                    </div>
+                </div>
+                
+    </div>
+
+</div>
+
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function item_clicked(food, price){
+        // document.getElementById("btn-group").innerHTML = "Order was rejected";
+        // alert(food + "of "+ price + "added")
+        document.getElementById('default_label').innerHTML='';
+        var div = document.getElementById('added_item');
+        var data = '<div class="food_item_label">'
+                    + '<span> '+food+' </span>'
+                    +'</div>'
+                    +'<div class="quantity-field">'
+                    +'Qty: <input type="number" size="10" id="numberinput" name="mynumber" min="1" value="1" />'
+                    +'</div>'
+                    +'<div class="new_total">'
+                    +'<span>' +price +'</span>'
+                    +'</div>'
+                    +'<div class="spacer"></div>';
+                
+        div.innerHTML += data;
+    }
+</script>
+
+</body>
+</html>

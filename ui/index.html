@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Login | Fast Food Fast!</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+</head>
+<body>
+
+<div id="main_content">
+    <div class="center login-header">
+        <h3>Fast Food Fast Login</h3>
+    </div>
+    <div class="center login_box">
+        <div class="alert alert-info" id="alert-box">Please login with your email and password.</div>
+        <form method="post" action="index.html" name="login_form">
+            <p><input type="email" class="input" id="email" name="email" value="john@example.com" placeholder="Enter Email" required></p>
+            <p><input type="password" placeholder="**********" id="password" name="password" value="12345678" required></p>
+            <p><input type="radio" name="user_type" value="customer" checked> Customer
+                <input type="radio" name="user_type" value="admin"> Admin</p>
+            <p>
+                <input type="button" class="button button_round_corner button_blue" onclick="redirect_user()" value="LOGIN">
+            </p>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function redirect_user(){
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var user_type = document.getElementsByName('user_type');
+
+        if(email == "" || password == ""){
+            document.getElementById("alert-box").innerHTML = "Please fill the entire form";
+        }
+        else{
+            // proceed with checking which type of user they are
+
+            for (var i = 0, length = user_type.length; i < length; i++)
+            {
+                if (user_type[i].checked)
+                {
+                    if(user_type[i].value == 'customer'){
+                        window.location.href = "customer/index.html";
+                    }
+                    else if(user_type[i].value == 'admin'){
+                        window.location.href = "admin/index.html";
+                    }
+                    break;
+                }
+            }
+
+        }
+
+    }
+
+</script>
+</body>
+</html>

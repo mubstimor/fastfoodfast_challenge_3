@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Food Items | Fast Food Fast!</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+</head>
+<body>
+
+<div id="main_wrapper">
+
+    <div class="main-menu">
+        <div class="sidebar-nav">
+            <ul class="nav nav-tabs nav-menu">
+                <li><a class="nav-link" href="index.html"> Home</a></li>
+                <li><a class="nav-link active" href="food_items.html">Food Items</a></li>
+                <li><a class="nav-link" href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="left_box">
+        <div class="box-header well">
+            <h2>Food Items</h2>
+        </div>
+        <div class="links-right-section">
+            <a href="add_food_item.html"> <button type="button" class="button button_round_corner button_blue">  Add Food Item </button> </a>
+        </div>
+        <div class="form_content">
+
+            <table id="food_table">
+                <thead>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Actions</th>
+                </thead>
+                <tbody>
+                <tr class="odd" id="row1">
+                    <td>Chips</td>
+                    <td>7000Ush</td>
+                    <td>
+                        <a href="edit_food_item.html"><button type="button" class="button button_round_corner button_blue"> Edit </button></a> &nbsp;
+                        <a href="#"> <button type="button" class="button button_round_corner button_red" onclick="deleteRow('row1')"> Delete</button></a>
+                        </td>
+                </tr>
+                <tr class="even" id="row2">
+                    <td>Liver</td>
+                    <td>5000Ush</td>
+                    <td>
+                        <a href="edit_food_item.html"><button type="button" class="button button_round_corner button_blue"> Edit </button></a> &nbsp;
+                        <a href="#"> <button type="button" class="button button_round_corner button_red" onclick="deleteRow('row2')"> Delete</button></a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function deleteRow(r) {
+        document.getElementById(r).style.visibility = 'hidden';
+    }
+
+
+</script>
+</body>
+</html>

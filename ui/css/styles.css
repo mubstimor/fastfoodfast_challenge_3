@@ -1,0 +1,539 @@
+body {
+    margin: 0;
+    font-size: 22px;
+}
+
+#main_wrapper
+{
+    margin-left: 180px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* The sidebar menu */
+.sidebar-nav {
+    height: 40%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ececec;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidebar-nav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #369bd7;
+    display: block;
+}
+
+.active{
+    color: #fd286d !important;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar-nav a:hover {
+    color: #2fd781;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+div.center, p.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.sidebar-nav {
+    min-height: 0;
+    box-shadow: 0 0 10px #BDBDBD;
+    -webkit-box-shadow: 0 0 10px #BDBDBD;
+    -moz-box-shadow: 0 0 10px #BDBDBD;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.nav {
+    margin-left: 0;
+    margin-bottom: 18px;
+    list-style: none;
+}
+
+.form-label{
+    text-align: left;
+    padding: 20px 10px 10px 10px;
+}
+
+
+.box-header {
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid #DEDEDE;
+    -webkit-border-radius: 3px 3px 0 0;
+    min-height: 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 16px;
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1a000000',GradientType=0 );
+}
+
+.box-header h2 {
+    font-size: 15px;
+    width: auto;
+    clear: none;
+    float: left;
+    line-height: 25px;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.login-header{
+    width:100%;
+}
+
+.alert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #8bc5e8;
+    border: 1px solid #7ed0e5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #1c628b;
+}
+
+.alert-info {
+    background-color: #edebe1;
+    border-color: #e0d9cb;
+    color: #817b58;
+}
+
+form {
+    margin: 0 0 18px;
+}
+
+.login_box
+{
+    width:40%;
+    padding:10px;
+    background-color:#f5f5f5;
+}
+
+.signup_box{
+    width:80%;
+    float: left;
+}
+
+.left_box{
+    width:80%;
+    float: left;
+    margin-left: 20px;
+    border: 1px solid #DEDEDE;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+}
+
+.checkout_box{
+    width:28%;
+    float: left;
+    margin-left: 5px;
+    border: 1px solid #DEDEDE;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    position: relative;
+    min-height: 500px;
+}
+
+/* box content css styles */
+.form_content{
+    padding: 5px 15px 15px 20px;
+    min-height: 300px;
+}
+
+.form_content h2 {
+    font-size: 24px;
+    color: #317eac;
+    text-rendering: optimizelegibility;
+}
+
+.form_content h3 {
+    font-size: 18px;
+    color: #555555;
+}
+
+.login_box input[type="text"],input[type="password"]
+{
+    width:90%;
+    height:25px;
+    border-radius:2px;
+    font-size:17px;
+    padding-left:5px;
+    border:1px solid #cccccc;
+}
+
+.input{
+    border:1px solid #cccccc;
+    width:90%;
+    height:25px;
+    font-size:17px;
+}
+
+.food_label{
+    float: left;
+}
+
+.food_item_label{
+    float: left;
+}
+
+.food_image img{
+    float: left;
+    width: 20%;
+    padding-top: 5px;
+}
+
+.food_item{
+    float: left;
+    width: 100%
+}
+.price-right{
+    float: right;
+}
+
+.price-right a{
+    color: #d74b36;
+    text-decoration: none;
+}
+
+.order_item{}
+
+.order_item .food_item_label{
+    width:100%;
+}
+.order_item .quantity-field{
+float: left;
+width:100%;
+}
+
+.spacer{
+    min-height: 20px;
+    width: 100%;
+}
+
+.form-btn{
+    /* padding-top: 40% !important; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.order_item .quantity-field input{
+    width:20%
+    }
+
+.order_item .new_total{
+    float: left;
+}
+
+.btn-submit{
+    text-align: center;
+}
+
+.links-right-section{
+    float: right;
+    padding-right: 15px;
+}
+
+.menu_item{
+    padding-top: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    display: inline-table;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.button_round_corner {border-radius: 12px;}
+
+.button_green {background-color: #4CAF50;}
+.button_blue {background-color: #008CBA;}
+.button_red {background-color: #f44336;}
+
+@media only screen and (min-width : 1025px) {
+    /* ipad pro + landscape */
+    .left_box {
+        width: 70%;
+        margin-left: 0px;
+    }
+
+    .sidebar-nav {
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .price-right {
+        padding-top: 10px;
+    }
+}
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+    /* ipad landscape */
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .left_box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .sidebar-nav {
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .price-right {
+        padding-top: 10px;
+    }
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .left_box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .sidebar-nav {
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .price-right {
+        padding-top: 10px;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+    /* put your css styles in here */
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+    /* iphone 5/se portrait */
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .left_box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .sidebar-nav {
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .price-right {
+        padding-top: 10px;
+    }
+
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+    /* iphone 5/se landscape */
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .left_box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .sidebar-nav {
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .price-right {
+        padding-top: 10px;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+    /* smartphone portrait */
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .login_box { width:auto; }
+
+
+    .food_image img{
+        float: left;
+        width: 100%;
+    }
+
+    .price-right {
+        float: right;
+        padding-top: 10px;
+    }
+
+    #main_wrapper { margin-left: 0px; }
+
+    .sidebar-nav {
+         position: relative;
+         z-index: 0;
+         overflow-x: inherit;
+    }
+
+    .left_box{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+    /* iphone 5/se */
+    body { font-size: 16px; }
+    .button{
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .login_box { width:auto; }
+
+    .price-right {
+        float: right;
+        padding-top: 10px;
+    }
+
+    #main_wrapper { margin-left: 0px; }
+
+    .sidebar-nav {
+        position: relative;
+        z-index: 0;
+        overflow-x: inherit;
+    }
+
+    .left_box{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+}
+
+/* circle plus css */
+.circle{
+    border:1px solid #000;
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    position:relative;
+    margin: 10px 2px -4px 6px;
+    display:inline-block;
+}
+.circle.plus:before,
+.circle.plus:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#d74b36;
+}
+.circle.plus:before{
+    width: 2px;
+    margin: 2px auto;
+}
+.circle.plus:after{
+    margin: auto 2px;
+    height: 2px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Order Details | Fast Food Fast!</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+</head>
+<body>
+
+
+<div id="main_wrapper">
+
+    <div class="main-menu">
+        <div class="sidebar-nav">
+            <ul class="nav nav-tabs nav-menu">
+                <li><a class="nav-link active" href="index.html"> Home</a></li>
+                <li><a class="nav-link" href="food_items.html">Food Items</a></li>
+                <li><a class="nav-link" href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="left_box">
+        <div class="box-header well">
+            <h2>Order Details</h2>
+        </div>
+
+        <div class="center">
+            <div class="alert alert-info" id="btn-group">
+                Would you like to accept this order? &nbsp; <button type="button" class="button button_round_corner button_green" id="accept_btn" onclick="accept_clicked()">Accept</button> &nbsp; or &nbsp;  <button type="button" class="button button_round_corner button_red" id="reject_btn" onclick="reject_clicked()">Reject</button>
+            </div>
+        </div>
+
+        <div class="form_content">
+
+            <div class="menu_item">
+                <div class="menu-item header">
+                    <h2>Breakfast</h2>
+                </div>
+
+                <div class="food_item">
+                    <div class="food_item_label">
+                        <h4><span>Matooke</span></h4>
+                    </div>
+                    <div class="price-right">
+                        <a href="#">5000Ush</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="center">
+            <p id="response_label"></p>
+            <!--<a href="#"> Complete Order</a>-->
+            <button type="button" class="button button_round_corner button_blue" id="complete_btn" style="visibility: hidden">Complete Order</button>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function accept_clicked(){
+        document.getElementById("btn-group").innerHTML = "Order was accepted";
+        document.getElementById('complete_btn').style.visibility = 'visible';
+    }
+
+    function reject_clicked(){
+        document.getElementById("btn-group").innerHTML = "Order was rejected";
+    }
+
+</script>
+</body>
+</html>
